@@ -1,0 +1,43 @@
+
+@E2ETest
+Scenario: Customer place an order by purchasing an item from search # src/test/resources/functionalTests/End2End_Tests.feature:5
+  Given user is on Home Page                                        # stepDefinitions.steps.user_is_on_Home_Page()
+  When he search for "dress"                                        # stepDefinitions.steps.he_search_for(java.lang.String)
+  And choose to buy the first item                                  # stepDefinitions.steps.choose_to_buy_the_first_item()
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button.single_add_to_cart_button"}
+  (Session info: chrome=123.0.6312.59)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'RAHUL', ip: '192.168.1.18', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d2ff5888faabd867886b16db9dbfa4b, findElement {using=css selector, value=button.single_add_to_cart_button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.59, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\thrah\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55343/devtoo..., se:cdpVersion: 123.0.6312.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d2ff5888faabd867886b16db9dbfa4b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at pageObjects.ProductListingPage.clickOn_AddToCart(ProductListingPage.java:27)
+	at stepDefinitions.steps.choose_to_buy_the_first_item(steps.java:52)
+	at ✽.choose to buy the first item(file:///C:/Users/thrah/NewWorkSpace/CucumberPageObjectMangerFramework/src/test/resources/functionalTests/End2End_Tests.feature:8)
+
+  And moves to checkout from mini cart                              # stepDefinitions.steps.moves_to_checkout_from_mini_cart()
+  And enter personal details on checkout page                       # stepDefinitions.steps.enter_personal_details_on_checkout_page()
+  And select same delivery address                                  # stepDefinitions.steps.select_same_delivery_address()
+  And select payment method as "check" payment                      # stepDefinitions.steps.select_payment_method_as_payment(java.lang.String)
+  And place the order                                               # stepDefinitions.steps.place_the_order()

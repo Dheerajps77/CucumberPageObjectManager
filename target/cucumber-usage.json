@@ -1,0 +1,1 @@
+[{"source":"^user is on Home Page$","steps":[{"name":"user is on Home Page","aggregatedDurations":{"median":6.4514002,"average":6.4514002}}]},{"source":"^he search for \"([^\"]*)\"$","steps":[{"name":"he search for \"dress\"","aggregatedDurations":{"median":1.5550861,"average":1.5550861}}]}]
